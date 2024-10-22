@@ -48,4 +48,4 @@ def generate_plot():
 if __name__ == '__main__':
     if not os.path.exists('static'):
         os.mkdir('static')
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)   # 这里设置端口可以开放给任何主机进行访问，而不是只有本电脑能访问，并强制约定访问端口
