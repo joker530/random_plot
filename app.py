@@ -4,9 +4,11 @@ import matplotlib.pyplot as plt
 import os
 import time
 import matplotlib
+from flask_cors import CORS
 matplotlib.use('Agg')  # 使用非 GUI 后端，不让容易出现GUI抢线程回不来的情况，会有多线程问题
 
 app = Flask(__name__)
+CORS(app)
 
 #
 def generate_random_plot():
